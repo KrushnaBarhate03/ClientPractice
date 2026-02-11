@@ -6,7 +6,7 @@ function Add() {
   const [student, setStudent] = useState({
     id: "",
     name: "",
-    age: ""
+    city: ""
   })
   function handlechange(e) {
     const name = e.target.name;
@@ -20,7 +20,7 @@ function Add() {
     const response = await axios.post(`${import.meta.env.VITE_API_URL}/students`, {
       id: student.id,
       name: student.name,
-      age: student.age
+      city: student.city
     })
     if (response.data.success) {
       setStudent({

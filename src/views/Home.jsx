@@ -8,7 +8,8 @@ function Home() {
   const[student,setStudent]=useState([])
 
 const loadstudent= async()=>{
-  const response=await axios.get(`${import.meta.env.VITE_API_URL}/students`);
+   const response=await axios.get(`${import.meta.env.VITE_API_URL}/students`);
+  // const response=await axios.get(`http://localhost:5001/students`)
   setStudent(response.data.data);
 }
 useEffect(()=>{
