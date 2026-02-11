@@ -19,7 +19,7 @@ function Edit() {
 
   async function buttonhandle() {
    try{
-    const response = await axios.put(`http://localhost:5001/students/${userId}`, {
+    const response = await axios.put(`${import.meta.env.VITE_API_URL}/students/${userId}`, {
      
       name: student.name,
       city: student.city
@@ -44,7 +44,7 @@ function Edit() {
   }
    const { userId }=useParams();
 const loadstudent=async()=>{
-    const response= await axios.get(`https://clientpractice.onrender.com/students/${userId}`);
+    const response= await axios.get(`${import.meta.env.VITE_API_URL}/students/${userId}`);
     setStudent(response.data.data);
 
 }

@@ -17,7 +17,7 @@ function Add() {
 
   async function buttonhandle() {
    try{
-    const response = await axios.post("https://clientpractice.onrender.com/students", {
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/students`, {
       id: student.id,
       name: student.name,
       age: student.age
