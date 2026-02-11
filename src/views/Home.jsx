@@ -8,7 +8,7 @@ function Home() {
   const[student,setStudent]=useState([])
 
 const loadstudent= async()=>{
-  const response=await axios.get("http://localhost:5001/students");
+  const response=await axios.get("https://clientpractice.onrender.com/students");
   setStudent(response.data.data);
 }
 useEffect(()=>{

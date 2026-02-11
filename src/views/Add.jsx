@@ -17,7 +17,7 @@ function Add() {
 
   async function buttonhandle() {
    try{
-    const response = await axios.post("http://localhost:5001/students", {
+    const response = await axios.post("https://clientpractice.onrender.com/students", {
       id: student.id,
       name: student.name,
       age: student.age

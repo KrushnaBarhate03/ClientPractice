@@ -6,7 +6,7 @@ import axios from 'axios'
 import {Link} from 'react-router-dom'
 function StudentsCard({id,name,city,loadstudent}) {
   const DeleteRecord=async()=>{
-   const response=await axios.delete(`http://localhost:5001/students/${id}`);
+   const response=await axios.delete(`https://clientpractice.onrender.com/students/${id}`);
     
    if(response.data.success){
     toast.success(response.data.message);
